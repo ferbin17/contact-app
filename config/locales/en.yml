@@ -31,3 +31,26 @@
 
 en:
   hello: "Hello world"
+  
+  # Information container translations
+  address: "Address"
+  lets_talk: "Lets Talk"
+  general_support: "General Support"
+  change_language: "Change Language"
+  
+  # Form translations
+  send_us_a_message: "Send Us A Message"
+  tell_us_your_name: "Tell us your name"
+  enter_your_email: "Enter your email"
+  enter_phone_number: "Enter phone number"
+  message: "Message"
+  send_message: "Send Message"
+  first_name: "First name"
+  last_name: "Last name"
+  example: "Eg."
+  write_us_a_message: "Write us a message"
+  type_first_name: "Type first name"
+  type_last_name: "Type last name"
+  valid_email_is_required: "Valid email is required"
+  message_is_required: "Message is required"
+

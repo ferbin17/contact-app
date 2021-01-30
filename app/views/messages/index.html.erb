@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="image/png" href="<%= image_url('icons/favicon.ico') %>"/>
+	<%= stylesheet_link_tag 'bootstrap/css/bootstrap', media: 'all', 'data-turbolinks-track': 'reload' %>
+	<%= stylesheet_link_tag 'font-awesome-4.7.0/css/font-awesome', media: 'all', 'data-turbolinks-track': 'reload' %>
+	<%= stylesheet_link_tag 'Linearicons-Free-v1.0.0/icon-font.min', media: 'all', 'data-turbolinks-track': 'reload' %>
+	<%= stylesheet_link_tag 'animate/animate', media: 'all', 'data-turbolinks-track': 'reload' %>
+	<%= stylesheet_link_tag 'css-hamburgers/hamburgers', media: 'all', 'data-turbolinks-track': 'reload' %>
+	<%= stylesheet_link_tag 'animsition/css/animsition', media: 'all', 'data-turbolinks-track': 'reload' %>
+	<%= stylesheet_link_tag 'select2/select2', media: 'all', 'data-turbolinks-track': 'reload' %>
+	<%= stylesheet_link_tag 'daterangepicker/daterangepicker', media: 'all', 'data-turbolinks-track': 'reload' %>
+	<%= stylesheet_link_tag 'util', media: 'all', 'data-turbolinks-track': 'reload' %>
+	<!--===============================================================================================-->
+	<%= javascript_include_tag 'jquery/jquery-3.2.1.min.js' %>
+	<%= javascript_include_tag 'animsition/js/animsition.min.js' %>
+	<%= javascript_include_tag 'bootstrap/js/popper.js' %>
+	<%= javascript_include_tag 'bootstrap/js/bootstrap.min.js' %>
+	<%= javascript_include_tag 'select2/select2.min.js' %>
+	<%= javascript_include_tag 'daterangepicker/moment.min.js' %>
+	<%= javascript_include_tag 'daterangepicker/daterangepicker.js' %>
+	<%= javascript_include_tag 'countdowntime/countdowntime.js' %>
+	<%= javascript_pack_tag 'main' %>
+</head>
+<body>	
+	<div class="container-contact100">
+		<div class="wrap-contact100">
+			<form class="contact100-form validate-form">
+				<span class="contact100-form-title">
+					<%= t(:send_us_a_message) %>
+				</span>
+				
+				<div id="flash-box"></div>
+
+				<label class="label-input100" for="first-name"><%= t(:tell_us_your_name) %> *</label>
+				<div class="wrap-input100 rs1-wrap-input100 validate-input" data-validate="<%= t(:type_first_name) %>">
+					<input id="first-name" class="input100" type="text" name="first_name" placeholder="<%= t(:first_name) %>">
+					<span class="focus-input100"></span>
+				</div>
+				<div class="wrap-input100 rs2-wrap-input100 validate-input" data-validate="<%= t(:type_last_name) %>">
+					<input class="input100" type="text" name="last_name" placeholder="<%= t(:last_name) %>">
+					<span class="focus-input100"></span>
+				</div>
+
+				<label class="label-input100" for="email"><%= t(:enter_your_email) %> *</label>
+				<div class="wrap-input100 validate-input" data-validate = "<%= t(:valid_email_is_required) %>: ex@abc.xyz">
+					<input id="email" class="input100" type="text" name="email" placeholder="<%= t(:example) %> example@email.com">
+					<span class="focus-input100"></span>
+				</div>
+
+				<label class="label-input100" for="phone"><%= t(:enter_phone_number) %></label>
+				<div class="wrap-input100">
+					<input id="phone" class="input100" type="text" name="phone" placeholder="<%= t(:example) %> +1 800 000000">
+					<span class="focus-input100"></span>
+				</div>
+
+				<label class="label-input100" for="message"><%= t(:message) %> *</label>
+				<div class="wrap-input100 validate-input" data-validate = "<%= t(:message_is_required) %>">
+					<textarea id="message" class="input100" name="message" placeholder="<%= t(:write_us_a_message) %>"></textarea>
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="container-contact100-form-btn">
+					<button class="contact100-form-btn">
+						<%= t(:send_message) %>
+					</button>
+				</div>
+			</form>
+
+			<div class="contact100-more flex-col-c-m" style="background-image: url(<%= image_url('bg-01.jpg') %>);">
+				<div class="flex-w size1 p-b-47">
+					<div class="txt1 p-r-25">
+						<span class="lnr lnr-map-marker"></span>
+					</div>
+
+					<div class="flex-col size2">
+						<span class="txt1 p-b-20">
+							Address <%= t(:address) %>
+						</span>
+
+						<span class="txt2">
+							Mada Center 8th floor, 379 Hudson St, New York, NY 10018 US
+						</span>
+					</div>
+				</div>
+
+				<div class="dis-flex size1 p-b-47">
+					<div class="txt1 p-r-25">
+						<span class="lnr lnr-phone-handset"></span>
+					</div>
+
+					<div class="flex-col size2">
+						<span class="txt1 p-b-20">
+							 <%= t(:lets_talk) %>
+						</span>
+
+						<span class="txt3">
+							+1 800 1236879
+						</span>
+					</div>
+				</div>
+
+				<div class="dis-flex size1 p-b-47">
+					<div class="txt1 p-r-25">
+						<span class="lnr lnr-envelope"></span>
+					</div>
+
+					<div class="flex-col size2">
+						<span class="txt1 p-b-20">
+							 <%= t(:general_support) %>
+						</span>
+
+						<span class="txt3">
+							contact@example.com
+						</span>
+					</div>
+				</div>
+
+		</div>
+	</div>
+
+	<div id="dropDownSelect1"></div>
+	<script>
+		$(".selection-2").select2({
+			minimumResultsForSearch: 20,
+			dropdownParent: $('#dropDownSelect1')
+		});
+	</script>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-23581568-13');
+	</script>
+</body>
+</html>
