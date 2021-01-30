@@ -4,8 +4,70 @@
 # model remove the '{}' from the fixture names and add the columns immediately
 # below each fixture, per the syntax in the comments below
 #
+
+zero:
+  first_name: "asdasd"
+  last_name: "asd"
+  email: "asd@asd.asd"
+  phone: "123456789"
+  message: "asdasd"
+
 one: {}
-# column: value
-#
-two: {}
-# column: value
+
+two:
+  last_name: "asd"
+  email: "asd@asd.asd"
+  phone: "123456789"
+  message: "asdasd"
+
+three:
+  first_name: "asdasd"
+  email: "asd@asd.asd"
+  phone: "123456789"
+  message: "asdasd"
+  
+four:
+  first_name: "asdasd"
+  last_name: "asd"
+  phone: "123456789"
+  message: "asdasd"
+  
+five:
+  first_name: "asdasd"
+  last_name: "asd"
+  email: "asd@asd.asd"
+  phone: "123456789"
+  
+six:
+  first_name: "asdasd"
+  last_name: "asd"
+  email: "asd@asd.asd"
+  message: "asdasd"
+  
+seven:
+  first_name: "asdasd"
+  last_name: "asd"
+  email: "asddasd"
+  phone: "123456789"
+  message: "asdasd"
+  
+eight:
+  first_name: "asdasd"
+  last_name: "asd"
+  email: "asd@asd.asd"
+  phone: "123456789"
+  message: "asdasd"
+  
+nine:
+  first_name: "asdasd"
+  last_name: "asd"
+  email: "asd@asd.asd"
+  phone: "123456789"
+  message: "asdasd"
+  
+ten:
+  first_name: "asdasd"
+  last_name: "asd"
+  email: "asd@asd.asd"
+  phone: "123456789"
+  message: "asdasd"
