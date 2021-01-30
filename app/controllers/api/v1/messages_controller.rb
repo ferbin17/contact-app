@@ -1,5 +1,7 @@
 class Api::V1::MessagesController < ApplicationController
   
+  # create function for message
+  # Respond either success message or error messages
   def create
     message = Message.new(message_params)
     if message.save
@@ -10,6 +12,7 @@ class Api::V1::MessagesController < ApplicationController
   end
   
   private
+    # Permit message_params
     def message_params
       params.require(:message).permit(:first_name, :last_name, :email, :phone, 
         :message)

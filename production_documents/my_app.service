@@ -1,0 +1,41 @@
+# /etc/systemd/system/my_app.service
+# After installing or making changes to my_app.service
+# systemctl daemon-reload
+# Enable so it starts on boot
+# systemctl enable my_app.service
+# Initial start up.
+# systemctl start my_app.service
+# Check status
+# systemctl status my_app.service
+# A normal restart. Warning: listeners sockets will be closed
+# while a new puma process initializes.
+# systemctl restart prediction_app.service
+
+[Unit]
+Description=Puma HTTP Server
+After=network.target
+
+[Service]
+# Foreground process (do not use --daemon in ExecStart or config.rb)
+Type=forking
+
+# Preferably configure a non-privileged user
+User=deploy
+
+# The path to the your application code root directory.
+WorkingDirectory=path-to-my_app
+
+# Helpful for debugging socket activation, etc.
+# Environment=PUMA_DEBUG=1
+
+# an absolute URL to puma. For example /usr/local/bin/puma
+ExecStart=/usr/local/rvm/wrappers/ruby-3.0.0@gemset-name/puma -C path-to-my_app/config/puma.rb ../config.ru
+PIDFile=path-to-my_app/shared/pids/puma.pid
+
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
+
+
+
