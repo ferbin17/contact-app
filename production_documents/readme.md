@@ -34,3 +34,4 @@ Nginx and RVM is necessary for this production set up work
 - Nginx
     Replace 'path-to-my_app' with absolute path of project (2 occurances)
     Replace 'domain-name' with the domain (1 occurance)
+    Include 'app.conf' in nginx.conf file
