@@ -1,0 +1,10 @@
+Hello,
+
+We have received a message from <%= @message.full_name %>.
+
+Here is the data <%= @message.full_name %> have submitted
+<% @message.displayable_details.each do |k, v| %>
+  <%= k.titleize %>: <%= v %>
+<% end %>
+    
+Have a great day!

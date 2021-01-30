@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h5>Hello,</h5>
+    <p>
+      We have received a message from <%= @message.full_name %>.
+    </p>
+    <p>
+      Here is the data <%= @message.full_name %> have submitted<br>
+      <% @message.displayable_details.each do |k, v| %>
+        <%= k.titleize %>: <%= v %><br>
+      <% end %>
+    </p>
+    <p>Have a great day!</p>
+  </body>
+</html>

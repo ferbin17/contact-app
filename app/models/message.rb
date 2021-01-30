@@ -16,6 +16,6 @@ class Message < ApplicationRecord
   
   private
     def send_mail
-      # MessageMailer.with(message: self).message_mail.deliver_now
+      MessageMailer.with(message: self).message_mail.deliver_now
     end
 end
