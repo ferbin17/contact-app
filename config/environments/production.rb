@@ -131,8 +131,4 @@ Rails.application.configure do
     authentication: "plain",
     enable_starttls_auto: true
   }
-
-  # Set ENV values for db
-  ENV['CONTACT_APP_DATABASE_USERNAME'] = Rails.application.credentials.database[:username]
-  ENV['CONTACT_APP_DATABASE_PASSWORD'] = Rails.application.credentials.database[:password]
 end

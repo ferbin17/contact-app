@@ -53,4 +53,24 @@ en:
   type_last_name: "Type last name"
   valid_email_is_required: "Valid email is required"
   message_is_required: "Message is required"
+  
+  # Message Model
+  message_created: "Message Sent"
+  activerecord:
+    errors:
+      models:
+        message:
+          attributes:
+            email:
+              invalid_email_format: "Invalid Format"
+              cant_be_blank: "can't be blank"
+            first_name:
+              cant_be_blank: "can't be blank"
+            last_name:
+              cant_be_blank: "can't be blank"
+            phone:
+              cant_be_blank: "can't be blank"
+            message:
+              cant_be_blank: "can't be blank"
+
 
