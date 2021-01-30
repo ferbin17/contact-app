@@ -32,6 +32,10 @@
 en:
   hello: "Hello world"
   
+  # Language shortcode translations
+  en_text: "English"
+  es_text: "España"
+  
   # Information container translations
   address: "Address"
   lets_talk: "Lets Talk"

@@ -3,6 +3,12 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       resources :messages, only: [:create]
+      
+      resources :configurations, only: [] do
+        collection do
+          post :change_locale
+        end
+      end
     end
   end
 

@@ -18,5 +18,7 @@ module MyApp
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+    config.i18n.available_locales = (Dir.entries('config/locales') - [".", ".."]).map{|x| x.gsub('.yml', '').to_sym}
+    I18n.default_locale = :en
   end
 end

@@ -118,6 +118,24 @@
 						</span>
 					</div>
 				</div>
+        
+        <div class="dis-flex size1 p-b-47">
+          <div class="txt1 p-r-25">
+            <span class="lnr lnr-spell-check"></span>
+          </div>
+
+          <div class="flex-col size2">
+            <span class="txt1 p-b-20">
+               <%= t(:change_language) %>
+            </span>
+
+            <span class="txt3">
+              <%= select_tag "locale",
+                options_for_select(I18n.available_locales.map(&:to_s).collect{ |u| [t("#{u}_text"), u] },
+                selected: I18n.locale), class: "custom-select" %>
+            </span>
+          </div>
+        </div>
 
 		</div>
 	</div>

@@ -1,0 +1,46 @@
+es:
+  hello: "Hola Mundo"
+
+  # Language shortcode translations
+  en_text: "English"
+  es_text: "España"
+  
+  # Information container translations
+  address: "Habla a"
+  lets_talk: "Hablemos"
+  general_support: "Apoyo general"
+  
+  # Form translations
+  send_us_a_message: "Mandanos un mensaje"
+  tell_us_your_name: "Dinos tu nombre"
+  enter_your_email: "Introduce tu correo electrónico"
+  enter_phone_number: "Ingresar número telefónico"
+  message: "Mensaje"
+  send_message: "Enviar mensaje"
+  first_name: "Nombre de pila"
+  last_name: "Apellido"
+  example: "Eg."
+  write_us_a_message: "Escríbenos un mensaje"
+  type_first_name: "Escriba el nombre"
+  type_last_name: "Escriba el apellido"
+  valid_email_is_required: "Se requiere correo electrónico válido"
+  message_is_required: "Se requiere mensaje"
+  
+  # Message Model
+  message_created: "Mensaje enviado"
+  activerecord:
+    errors:
+      models:
+        message:
+          attributes:
+            email:
+              cant_be_blank: "no puede estar en blanco"
+              invalid_email_format: "Formato de correo inválido"
+            first_name:
+              cant_be_blank: "no puede estar en blanco"
+            last_name:
+              cant_be_blank: "no puede estar en blanco"
+            phone:
+              cant_be_blank: "no puede estar en blanco"
+            message:
+              cant_be_blank: "no puede estar en blanco"
